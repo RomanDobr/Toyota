@@ -1,6 +1,11 @@
 package avto;
 
-import detail.*;
+import detail.Electrician;
+import detail.Engine;
+import detail.GasTank;
+import detail.Headlights;
+import detail.Transmission;
+import detail.Wheel;
 import exceptions.StartCarException;
 import factory.Country;
 
@@ -13,7 +18,7 @@ public class Cabriolet extends Car {
         super(color, maxSpeed, typeTransmission, isMove, wheel, gasTank, engine, electrician, headlights, country);
     }
 
-    private boolean doRaiseOrLower () {
+    private boolean doRaiseOrLower() {
         return isLower = true;
     }
 

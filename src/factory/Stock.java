@@ -37,7 +37,7 @@ public class Stock {
         for (int i = 0; i < camrys.length; i++) {
             camrys[i] =  copyCamry[i];
         }
-        camrys[countCurrentCamry-1] = camry;
+        camrys[countCurrentCamry - 1] = camry;
         System.out.println("машина " + camry.getName() + " создана №" + countCurrentCamry);
         System.out.println("------------------------------------------------------------------");
     }
@@ -48,7 +48,7 @@ public class Stock {
         }
         countCurrentCar--;
         countFreeSpaceForCar++;
-        Camry camry = camrys[countCurrentCamry-1];
+        Camry camry = camrys[countCurrentCamry - 1];
         System.out.println("машина " + camry.getName() + " забрали №" + countCurrentCamry);
         System.out.println("------------------------------------------------------------------");
         Camry[] copyCamry = new Camry[countCurrentCamry];
@@ -65,6 +65,7 @@ public class Stock {
         return camry;
     }
     //*******************************************************************************************************
+
     public void setSolaraStock(Solara solara) {
         countCurrentSolara++;
         countCurrentCar++;
@@ -79,7 +80,7 @@ public class Stock {
         for (int i = 0; i < solaras.length; i++) {
             solaras[i] = copySolara[i];
         }
-        solaras[countCurrentSolara-1] = solara;
+        solaras[countCurrentSolara - 1] = solara;
         System.out.println("машина " + solara.getName() + " создана №" + countCurrentSolara);
         System.out.println("------------------------------------------------------------------");
     }
@@ -90,7 +91,7 @@ public class Stock {
         }
         countCurrentCar--;
         countFreeSpaceForCar++;
-        Solara solara = solaras[countCurrentSolara-1];
+        Solara solara = solaras[countCurrentSolara - 1];
         System.out.println("машина " + solara.getName() + " забрали №" + countCurrentSolara);
         System.out.println("------------------------------------------------------------------");
         Solara[] copySolara = new Solara[countCurrentSolara];
@@ -107,6 +108,7 @@ public class Stock {
         return solara;
     }
     //*******************************************************************************************************
+
     public void setDynaStock(Dyna dyna) {
         countCurrentDyna++;
         countCurrentCar++;
@@ -121,7 +123,7 @@ public class Stock {
         for (int i = 0; i < dynas.length; i++) {
             dynas[i] = copyDyna[i];
         }
-        dynas[countCurrentDyna-1] = dyna;
+        dynas[countCurrentDyna - 1] = dyna;
         System.out.println("машина " + dyna.getName() + " создана №" + countCurrentDyna);
         System.out.println("------------------------------------------------------------------");
     }
@@ -132,7 +134,7 @@ public class Stock {
         }
         countCurrentCar--;
         countFreeSpaceForCar++;
-        Dyna dyna = dynas[countCurrentDyna-1];
+        Dyna dyna = dynas[countCurrentDyna - 1];
         System.out.println("машина " + dyna.getName() + " забрали №" + countCurrentDyna);
         System.out.println("------------------------------------------------------------------");
         Dyna[] copyDyna = new Dyna[countCurrentDyna];
@@ -149,6 +151,7 @@ public class Stock {
         return dyna;
     }
     //*******************************************************************************************************
+
     public void setHianceStock(Hiance hiance) {
         countCurrentHiance++;
         countCurrentCar++;
@@ -163,7 +166,7 @@ public class Stock {
         for (int i = 0; i < hiances.length; i++) {
             hiances[i] = copyHiance[i];
         }
-        hiances[countCurrentHiance-1] = hiance;
+        hiances[countCurrentHiance - 1] = hiance;
         System.out.println("машина " + hiance.getName() + " создана №" + countCurrentHiance);
         System.out.println("------------------------------------------------------------------");
     }
@@ -174,7 +177,7 @@ public class Stock {
         }
         countCurrentCar--;
         countFreeSpaceForCar++;
-        Hiance hiance = hiances[countCurrentHiance-1];
+        Hiance hiance = hiances[countCurrentHiance - 1];
         System.out.println("машина " + hiance.getName() + " забрали №" + countCurrentHiance);
         System.out.println("------------------------------------------------------------------");
         Hiance[] copyHiance = new Hiance[countCurrentHiance];
@@ -185,7 +188,7 @@ public class Stock {
         }
         hiances = new Hiance[copyHiance.length - 1];
         for (int i = 0; i < hiances.length; i++) {
-           hiances[i] = copyHiance[i];
+            hiances[i] = copyHiance[i];
         }
         countCurrentHiance--;
         return hiance;

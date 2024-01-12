@@ -1,8 +1,14 @@
 package avto;
 
-import detail.*;
+import detail.Electrician;
+import detail.Engine;
+import detail.GasTank;
+import detail.Headlights;
+import detail.Transmission;
+import detail.Wheel;
 import exceptions.StartCarException;
 import factory.Country;
+
 public class PassengerCar extends Car {
     private boolean isCruiseControl;
 
@@ -10,6 +16,7 @@ public class PassengerCar extends Car {
                         GasTank gasTank, Engine engine, Electrician electrician, Headlights headlights, Country country) {
         super(color, maxSpeed, typeTransmission, isMove, wheel, gasTank, engine, electrician, headlights, country);
     }
+
     public void setCruiseControl(boolean cruiseControl) {
         isCruiseControl = cruiseControl;
     }

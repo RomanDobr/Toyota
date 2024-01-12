@@ -8,6 +8,7 @@ public enum Country {
     CHINA("Китай"),
     THAILAND("Таиланд");
     private String name;
+
     Country(String name) {
         this.name = name;
     }

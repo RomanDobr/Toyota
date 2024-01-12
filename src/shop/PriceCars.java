@@ -3,7 +3,7 @@ package shop;
 public enum PriceCars {
     PRICE_CAMRY("CAMRY", 10_000),
     PRICE_SOLARA("SOLARA", 12_000),
-    PRICE_HIANCE("HIANCE",15_000),
+    PRICE_HIANCE("HIANCE", 15_000),
     PRICE_DYNA("DYNA", 22_000);
 
     private String nameCar;

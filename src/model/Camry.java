@@ -1,7 +1,12 @@
 package model;
 
 import avto.PassengerCar;
-import detail.*;
+import detail.Electrician;
+import detail.Engine;
+import detail.GasTank;
+import detail.Headlights;
+import detail.Transmission;
+import detail.Wheel;
 import exceptions.StartCarException;
 import factory.Country;
 

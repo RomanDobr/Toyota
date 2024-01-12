@@ -1,6 +1,13 @@
 package factory;
 
-import detail.*;
+import static detail.Transmission.AKPP;
+import static detail.Transmission.MECHANICS;
+
+import detail.Electrician;
+import detail.Engine;
+import detail.GasTank;
+import detail.Headlights;
+import detail.Wheel;
 import exceptions.CarNotFaundException;
 import exceptions.CountyFactoryNotEqualException;
 import model.Camry;
@@ -8,13 +15,12 @@ import model.Dyna;
 import model.Hiance;
 import model.Solara;
 
-import static detail.Transmission.*;
-
 public class Conveyor {
     private Country country;
     private PriceCar priceCar;
     private Factory factory;
     private static int countCamry;
+
     public Conveyor(Country country, Factory factory) {
         this.country = country;
         this.factory = factory;
@@ -109,11 +115,11 @@ public class Conveyor {
     }
 
     private boolean checkCountry(Factory factory) throws CountyFactoryNotEqualException {
-        if (this.getCountry().equals(factory.getCountry())){
+        if (this.getCountry().equals(factory.getCountry())) {
             return true;
         }
-        String s = "Ошибка: страна " + this.getCountry() + " c конвейером, " +
-                   "не совпадает со страной где фабрика " + factory.getCountry();
+        String s = "Ошибка: страна " + this.getCountry() + " c конвейером, "
+                + "не совпадает со страной где фабрика " + factory.getCountry();
         throw new CountyFactoryNotEqualException(s);
     }
 }

@@ -1,9 +1,13 @@
 package avto;
 
-import detail.*;
+import detail.Electrician;
+import detail.Engine;
+import detail.GasTank;
+import detail.Headlights;
+import detail.Transmission;
+import detail.Wheel;
+import detail.Workable;
 import factory.Country;
-
-import java.util.Arrays;
 
 public abstract class Car implements Workable {
     private Country country;
@@ -19,16 +23,16 @@ public abstract class Car implements Workable {
 
     public Car(String color, int maxSpeed, Transmission typeTransmission, boolean isMove, Wheel[] wheel,
                GasTank gasTank, Engine engine, Electrician electrician, Headlights headlights, Country country) {
-                this.color = color;
-                this.maxSpeed = maxSpeed;
-                this.typeTransmission = typeTransmission;
-                this.isMove = isMove;
-                this.wheel = wheel;
-                this.gasTank = gasTank;
-                this.engine = engine;
-                this.electrician = electrician;
-                this.headlights = headlights;
-                this.country = country;
+        this.color = color;
+        this.maxSpeed = maxSpeed;
+        this.typeTransmission = typeTransmission;
+        this.isMove = isMove;
+        this.wheel = wheel;
+        this.gasTank = gasTank;
+        this.engine = engine;
+        this.electrician = electrician;
+        this.headlights = headlights;
+        this.country = country;
     }
 
     protected String getColor() {

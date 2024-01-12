@@ -1,6 +1,11 @@
 package factory;
 
-import detail.*;
+import detail.Electrician;
+import detail.Engine;
+import detail.GasTank;
+import detail.Headlights;
+import detail.Wheel;
+
 public class Factory {
     private Country country;
 

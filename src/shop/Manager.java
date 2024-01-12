@@ -4,21 +4,16 @@ import exceptions.CarNotFaundException;
 import exceptions.CountyFactoryNotEqualException;
 import factory.Conveyor;
 import factory.Stock;
+import java.io.FileWriter;
+import java.io.IOException;
 import model.Camry;
 import model.Dyna;
 import model.Hiance;
 import model.Solara;
 
-import java.io.FileWriter;
-import java.io.IOException;
 
 public class Manager {
-//    private PriceCars priceCar;
-//    private CostPrice costPrice;
-//    private Stock stock;
-//    private Client client;
-//    private Conveyor conveyor;
-//    private Cashier cashier;
+
     private String name;
     private Report report;
     private String[] reports = new String[0];
@@ -134,14 +129,15 @@ public class Manager {
         for (int i = 0; i < reports.length; i++) {
             reports[i] = copyTmp[i];
         }
-        reports[Report.countReports-1] = report.getManagerName() + "," +report.getNameCar()  + ","
+        reports[Report.countReports - 1] = report.getManagerName() + "," + report.getNameCar()  + ","
                 + report.getPriceCars() + "," + report.getCostPrice();
         System.out.println("------------------------------------------------------------------");
     }
+
     public void getReportsToFile(String[] reports) throws IOException {
         String fileName = "report.txt";
         int sumCostPrice = 0;
-        try (FileWriter fileWriter = new FileWriter(fileName, true)){
+        try (FileWriter fileWriter = new FileWriter(fileName, true)) {
             fileWriter.write(this.name + "\n");
             String str = "";
             for (int i = 0; i < reports.length; i++) {
